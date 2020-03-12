@@ -12,21 +12,110 @@
 <body>
   <header id="headLine">
     <h1 class="hidden">Drag and Drop to music mixer</h1>
-    <h2>Headline</h2>
-    <p>Subhead</p>
+</header>
+  <div id="container">
+  <main id="gameArea">
 
-  </header>
-  <main>
-    <!-- the tracks gonna start here -->
-  </main>
+    <h2 class="hidden">Game Area</h2>
+    <div class="overlayScreen">
+    <section class="gameCon">
+      <h3 class="hidden">Music Buttons</h3>
+
+        <div class="controlsBut" id="pauseBut">
+          <h2>Pause</h2>
+        </div>
+
+      <div id="musicBut">
+
+
+        <div class="leftSide">
+        <ul>
+
+            <li><div class="songBut" id="button1" data-trackref="bensound-epic"><img src="images/airplane.png" alt="Airplane icon"></div></li>
+
+            <div class= leftSideButton>
+            <li><div class="songBut" id="button2" data-trackref="bensound-erf"><img src="images/beach-umbrella.png" alt="Summer icon"></div></li>
+            <li><div class="songBut" id="button3" data-trackref="bensound-evolution"><img src="images/dolphin.png" alt="Animal icon"></div></li>
+            </div>
+
+            <li><div class="songBut" id="button4" data-trackref="bensound-hey"><img src="images/fishing.png" alt="Fishing icon"></div></li>
+
+
+        </ul>
+      </div>
+      <div class="rightSide">
+
+        <ul>
+          <li><div class="songBut" id="button5" data-trackref="bensound-anewbeginning"><img src="images/hot-air-balloon.png" alt="Hot air balloon icon"></div></li>
+
+          <div class="rightSideButton">
+          <li><div class="songBut" id="button6" data-trackref="bensound-badass"><img src="images/mountains.png" alt="Mountains icon"></div></li>
+          <li><div class="songBut" id="button7" data-trackref="bensound-downtown"><img src="images/palm.png" alt="Palm icon"></div></li>
+          </div>
+
+          <li><div class="songBut" id="button8" data-trackref="bensound-energy"><img src="images/tent.png" alt="Tent icon"></div></li>
+        </ul>
+      </div>
+
+
+
+      </div><!-- Close musicBut -->
+
+        <div class="controlsBut" id="resetBut">
+          <h2>Reset</h2></div>
+
+      <div id="screenCon">
+         <div id="screen">
+            <div class="dropZone"></div>
+            <div class="dropZone"></div>
+            <div class="dropZone"></div>
+            <div class="dropZone"></div>
+            <div class="dropZone"></div>
+
+          </div><!--Close screen -->
+
+         <div class="backgroundScr"></div>
+
+      </div><!-- Close screenCon -->
+    </div><!-- Close overlayScreen -->
+
+      <div class="line"></div>
+
+
+
+      <div id="animals">
+        <h3 class="hidden"> Animals</h3>
+        <img id="img1" class="image" src="images/alligator.svg" alt="Alligator icons">
+        <img id="img2" class="image" src="images/bee.svg" alt="Bee icons">
+        <img id="img3" class="image" src="images/cat.svg" alt="Cat icons">
+        <img id="img4" class="image" src="images/chicken.svg" alt="Chicken icons">
+        <img id="img5" class="image" src="images/giffer.svg" alt="Giffer icons">
+
+
+      </div><!-- Close animals -->
+
+
+
+    </section><!-- Close gameCon-->
+  </main><!-- Close gameArea -->
 
   <footer>
     <!-- Switch the tracks start here -->
+    <audio data-audioref="img1" class="audio" src="audio/bensound-hipjazz.mp3"></audio>
+    <audio data-audioref="img2" class="audio" src="audio/bensound-memories.mp3"></audio>
+    <audio data-audioref="img3" class="audio" src="audio/bensound-moose.mp3"></audio>
+    <audio data-audioref="img4" class="audio" src="audio/bensound-sexy.mp3"></audio>
+
+    <audio class="songs" src="audio/bensound-summer.mp3"></audio>
   </footer>
+  <!-- Background animation -->
+  <div class="p p-1"></div>
+    <div class="p p-2"></div>
+    <div class="p p-3"></div>
 
 
 
-
-<script src="js/main.js"></script>
+</div><!-- Close container -->
+	<script src="js/main.js"></script>
 </body>
 </html>
