@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
   <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
 
-  <title>Interactive Music Mixer</title>
+  <title> Music Mixer</title>
 </head>
 <body>
   <header id="headLine">
@@ -31,14 +31,14 @@
         <div class="leftSide">
         <ul>
 
-            <li><div class="songBut" id="button1" data-trackref="bensound-epic"><img src="images/airplane.png" alt="Airplane icon"></div></li>
+            <li><div class="songBut" id="button1" data-trackref="epic"><img src="images/airplane.png" alt="Airplane icon"></div></li>
 
             <div class= leftSideButton>
-            <li><div class="songBut" id="button2" data-trackref="bensound-erf"><img src="images/beach-umbrella.png" alt="Summer icon"></div></li>
-            <li><div class="songBut" id="button3" data-trackref="bensound-evolution"><img src="images/dolphin.png" alt="Animal icon"></div></li>
+            <li><div class="songBut" id="button2" data-trackref="erf" ><img src="images/beach-umbrella.png" alt="Summer icon"></div></li>
+            <li><div class="songBut" id="button3" data-trackref="evolution" ><img src="images/dolphin.png" alt="Animal icon"></div></li>
             </div>
 
-            <li><div class="songBut" id="button4" data-trackref="bensound-hey"><img src="images/fishing.png" alt="Fishing icon"></div></li>
+            <li><div class="songBut" id="button4" data-trackref="hey" ><img src="images/fishing.png" alt="Fishing icon"></div></li>
 
 
         </ul>
@@ -46,14 +46,14 @@
       <div class="rightSide">
 
         <ul>
-          <li><div class="songBut" id="button5" data-trackref="bensound-anewbeginning"><img src="images/hot-air-balloon.png" alt="Hot air balloon icon"></div></li>
+          <li><div class="songBut" id="button5" data-trackref="anewbeginning"><img src="images/hot-air-balloon.png" alt="Hot air balloon icon"></div></li>
 
           <div class="rightSideButton">
-          <li><div class="songBut" id="button6" data-trackref="bensound-badass"><img src="images/mountains.png" alt="Mountains icon"></div></li>
-          <li><div class="songBut" id="button7" data-trackref="bensound-downtown"><img src="images/palm.png" alt="Palm icon"></div></li>
+          <li><div class="songBut" id="button6" data-trackref="badass" ><img src="images/mountains.png" alt="Mountains icon"></div></li>
+          <li><div class="songBut" id="button7" data-trackref="downtown" ><img src="images/palm.png" alt="Palm icon"></div></li>
           </div>
 
-          <li><div class="songBut" id="button8" data-trackref="bensound-energy"><img src="images/tent.png" alt="Tent icon"></div></li>
+          <li><div class="songBut" id="button8" data-trackref="energy" ><img src="images/tent.png" alt="Tent icon"></div></li>
         </ul>
       </div>
 
@@ -101,12 +101,13 @@
 
   <footer>
     <!-- Switch the tracks start here -->
-    <audio data-audioref="img1" class="audio" src="audio/bensound-hipjazz.mp3"></audio>
-    <audio data-audioref="img2" class="audio" src="audio/bensound-memories.mp3"></audio>
-    <audio data-audioref="img3" class="audio" src="audio/bensound-moose.mp3"></audio>
-    <audio data-audioref="img4" class="audio" src="audio/bensound-sexy.mp3"></audio>
+    <audio data-audioref="img1" class="audio" id="sound1" src="audio/hipjazz.mp3"></audio>
+    <audio data-audioref="img2" class="audio" id="sound2" src="audio/memories.mp3"></audio>
+    <audio data-audioref="img3" class="audio" id="sound3" src="audio/moose.mp3"></audio>
+    <audio data-audioref="img4" class="audio" id="sound4" src="audio/sexy.mp3"></audio>
+    <audio data-audioref="img5" class="audio" id="sound5" src="audio/summer.mp3"></audio>
 
-    <audio class="songs" src="audio/bensound-summer.mp3"></audio>
+    <audio class="songs" src="audio/retrosoul.mp3"></audio>
 
   </footer>
   <!-- Background animation -->
