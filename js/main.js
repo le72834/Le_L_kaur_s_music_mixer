@@ -6,6 +6,9 @@
       song         = document.querySelector(".songs")
       dropZones = document.querySelectorAll('.dropZone'),
       imagesAnimal = document.querySelectorAll('.image'),
+      pauseButton = document.querySelector('#pauseBut'),
+      resetButton = document.querySelector('#resetBut'),
+      animalCon = document.querySelector('#animals'),
 
 
       button1 = document.querySelector('#button1'),
@@ -16,8 +19,12 @@
       button6 = document.querySelector('#button6'),
       button7 = document.querySelector('#button7'),
       button8 = document.querySelector('#button8'),
-      dropped = [],
-      activeSong = [];
+      sound1 = document.querySelector('#sound1'),
+      sound2 = document.querySelector('#sound2'),
+      sound3 = document.querySelector('#sound3'),
+      sound4 = document.querySelector('#sound4'),
+      sound5 = document.querySelector('#sound5'),
+      animalSong = [];
 
 function changeBg() {
   //debugger;
@@ -50,12 +57,10 @@ function changeBg() {
 }
 
 function changeSong () {
-  let audioSong = this.dataset.trackref;
+  var audioSong = this.dataset.trackref;
   //set the audio source
   song.src = `audio/${audioSong}.mp3`;
   song.load();
-  audioElement.forEach(sound =>{sound.currentTime=0;});
-  //activeSong.push(song);
   song.play();
 }
 
@@ -80,10 +85,58 @@ function changeSong () {
     let currentImage = event.dataTransfer.getData("text/plain");
     event.target.appendChild(document.querySelector(`#${currentImage}`));
 
-    //let droppedImage = document.querySelector(`#${currentImage}`);
-    //dropped.push(droppedImage);
+    let track = document.querySelector(`audio[data-audioref="${currentImage}"]`);
+    //animalSong.forEach(sound => {sound.currentTime = 0;});
+    track.load();
+    track.play();
 
   }
+  function pause() {
+    let audioSong = this.dataset.trackref;
+    //set the audio source
+    song.src = `audio/${audioSong}.mp3`;
+    
+    if (sound1.paused && sound2.paused && sound3.paused && sound4.paused && sound5.paused && song.paused){
+
+      audioElement.forEach(sound => {sound.play();});
+
+      if(!audioElement[0] == ''){
+
+          audioElement[0].play();
+        }
+
+    }
+    else {
+
+      audioElement.forEach(sound => {sound.pause();});
+      if(!audioElement[0] == ''){
+          audioElement[0].pause();
+        }
+
+      }
+  }
+
+  function reset() {
+    screenLayout.style.backgroundImage = 'none';
+    animalCon.appendChild(imagesAnimal[0]);
+    animalCon.appendChild(imagesAnimal[1]);
+    animalCon.appendChild(imagesAnimal[2]);
+    animalCon.appendChild(imagesAnimal[3]);
+    animalCon.appendChild(imagesAnimal[4]);
+    audioElement.forEach(sound => {sound.pause();});
+    //the ! is a check for inequality (it means the condition is false)
+   //also called a bang operator
+   //if there is no matching audio element , then kill the function and do nothing
+   let audioSong = this.dataset.trackref;
+   song.src = `audio/${audioSong}.mp3`;
+
+    if(!audioElement) {
+      audioElement.pause();
+      song.forEach (sound => {sound.pause();});
+      audioElement.currentTime = 0;
+      song.forEach(sound => {sound.currentTime = 0;});
+    }
+}
 
 
 
@@ -98,5 +151,7 @@ function changeSong () {
     zone.addEventListener('dragover', allowDragOver);
     zone.addEventListener('drop', allowDrop);
   });
+  pauseBut.addEventListener('click', pause);
+  resetButton.addEventListener('click', reset);
 
 })();
