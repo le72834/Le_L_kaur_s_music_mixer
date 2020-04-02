@@ -42,20 +42,10 @@ function allowDrag(event) {
     if (sound1.paused && sound2.paused && sound3.paused && sound4.paused && sound5.paused && song.paused){
 
       audioElement.forEach(sound => {sound.play();});
-
-      if(audioElement == 'play'){
-
-          audioElement.play();
-        }
     }
     else {
-
       audioElement.forEach(sound => {sound.pause();});
-      if(!audioElement == ''){
-          audioElement.pause();
-          audioElement.currentTime = 0;
-        }
-      }
+    }
   }
 function reset() {
     screenLayout.style.backgroundImage = 'none';
