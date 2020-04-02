@@ -142,12 +142,12 @@ body {
   flex-direction: row;
 }
 #button8 {
-  margin: 10px 60px 10px 50px;
+  margin: 0px 60px 10px 50px;
+  position: relative;
+  top: 0;
+
 
 }
-
-
-
 .backgroundScr {
   display: block;
   position: absolute;
@@ -240,6 +240,9 @@ body {
 #resetBut {
   float: right;
   margin-right: 50px;
+  position: relative;
+  bottom: 50px;
+
 
 }
  h2 {
@@ -313,7 +316,7 @@ body {
 
 }
 
-#animals {
+.animals {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -328,7 +331,7 @@ body {
 
 
 }
-#animals img {
+.animals img {
   margin: 0 10px 0 10px;
   width: auto;
   height: 20vh;
