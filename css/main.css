@@ -16,9 +16,9 @@ body {
 }
 #musicBut {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0 5px;
   -webkit-animation: fadeInLeft 1s 1;
   animation: fadeInLeft 1s 1;
   -webkit-filter: drop-shadow (0px 2px 0.5px #789);
@@ -55,8 +55,9 @@ body {
 }
 
 .songBut {
+  width: 45px;
+  padding: 7px;
   cursor: pointer;
-  padding: 5px;
   border-radius: 50px;
   border: 2px solid #97d0e6;
   background-color: #f8b2ae;
@@ -109,44 +110,20 @@ body {
    height: 6vh;
 }
 .leftSide {
-  margin-top: 8vh;
+  margin-top: 4vh;
+  margin-left: 30px;
 }
-#button1 {
-  margin: 0 60px 10px 50px;
-}
-#button2 {
-  margin-right: 30px;
-  margin-left: 5px;
-}
-.leftSideButton {
-  display: flex;
-  flex-direction: row;
-}
-#button4 {
-  margin: 10px 60px 10px 50px;
-
+.leftSide ul li {
+  margin-bottom: 10px;
 }
 .rightSide {
-  margin-top: 0%;
-  margin-left: 10%;
-}
-#button5 {
-  margin: 0 60px 10px 50px;
-}
-#button6 {
-  margin-right: 30px;
-  margin-left: 5px;
-}
-.rightSideButton {
-  display: flex;
-  flex-direction: row;
-}
-#button8 {
-  margin: 0px 60px 10px 50px;
-  position: relative;
-  top: 0;
+  position: absolute;
+  left: 90%;
+  top: 0%;
 
-
+}
+.rightSide ul li {
+  margin-bottom: 10px;
 }
 .backgroundScr {
   display: block;
@@ -235,13 +212,14 @@ body {
 }
 #pauseBut {
   margin-left: 40px;
-  margin-top: 30px;
+  position: relative;
+  top: 10px;
 }
 #resetBut {
   float: right;
-  margin-right: 50px;
+  margin-right: 60px;
   position: relative;
-  bottom: 50px;
+  bottom: 20px;
 
 
 }
@@ -321,11 +299,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-self: flex-end;
-  position: relative;
+  position: absolute;
   z-index: 1;
   flex: 1;
   top: 70vh;
-
+  left: 30%;
   -webkit-animation: jackInTheBox 1s 1;
   animation: jackInTheBox 1s 1;
 
