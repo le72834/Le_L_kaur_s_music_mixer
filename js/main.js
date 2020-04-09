@@ -1,8 +1,11 @@
+
+// Read the analysis of music mixer in assets folder if you concern anything
+
 (() => {
   //set up the tracks or the characters
   let seasonButtons = document.querySelectorAll('.songBut'),
       screenLayout = document.querySelector('#screen'),
-      audioElement = document.querySelectorAll('.audio'),
+      audioElement = document.querySelectorAll('audio'),
       song         = document.querySelector(".songs")
       dropZones   = document.querySelectorAll('.dropZone'),
       imagesAnimal = document.querySelectorAll('.image'),
@@ -38,15 +41,19 @@ function allowDrag(event) {
 }
 
   function pause() {
-
-    if (sound1.paused && sound2.paused && sound3.paused && sound4.paused && sound5.paused && song.paused){
-
+    console.log("Pause the song")
+      if (audioElement.paused == true) {
+    //if (sound1.paused && sound2.paused && sound3.paused && sound4.paused && sound5.paused && song.paused){
+      //debugger;
       audioElement.forEach(sound => {sound.play();});
+      //audioElement.play();
+
     }
     else {
       audioElement.forEach(sound => {sound.pause();});
-    }
+
   }
+}
 function reset() {
     screenLayout.style.backgroundImage = 'none';
     animalBoard.appendChild(imagesAnimal[0]);
@@ -59,36 +66,36 @@ function reset() {
    //also called a bang operator
    //if there is no matching audio element , then kill the function and do nothing
    let audioSong = this.dataset.trackref;
-   song.src = `audio/${audioSong}.mp3`;
+   audioElement.src = `audio/${audioSong}.mp3`;
    audioElement.forEach(sound => {sound.pause();});
     if(!audioElement) {
       audioElement.pause();
-      song.forEach (sound => {sound.pause();});
+      //audioElement.forEach (sound => {sound.pause();});
       audioElement.currentTime = 0;
-      song.forEach(sound => {sound.currentTime = 0;});
+      //song.forEach(sound => {sound.currentTime = 0;});
     }
 }
 function changeBg() {
   //debugger;
-  if (this.id == 'button1') {
+  if (this.id == 'songBtn1') {
     screenLayout.style.backgroundImage = 'url(images/winter_background.png)';
   }
-  else if (this.id == 'button2') {
+  else if (this.id == 'songBtn2') {
     screenLayout.style.backgroundImage = 'url(images/summer_background.svg)';
   }
-  else if (this.id == 'button3') {
+  else if (this.id == 'songBtn3') {
     screenLayout.style.backgroundImage = 'url(images/spring_background.svg)';
   }
-  else if (this.id == 'button4') {
-    screenLayout.style.backgroundImage = 'url(images/background2.png)';
+  else if (this.id == 'songBtn4') {
+    screenLayout.style.backgroundImage = 'url(images/background2.jpg)';
   }
-  else if (this.id == 'button5') {
+  else if (this.id == 'songBtn5') {
     screenLayout.style.backgroundImage = 'url(images/desert_2.jpg)';
   }
-  else if (this.id == 'button6') {
+  else if (this.id == 'songBtn6') {
     screenLayout.style.backgroundImage = 'url(images/mountain_background.png)';
   }
-  else if (this.id == 'button7') {
+  else if (this.id == 'songBtn7') {
     screenLayout.style.backgroundImage = 'url(images/land.jpg)';
   }
   else {
