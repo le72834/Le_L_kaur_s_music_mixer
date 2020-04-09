@@ -303,7 +303,7 @@ body {
   z-index: 1;
   flex: 1;
   top: 70vh;
-  left: 30%;
+  left: 25%;
   -webkit-animation: jackInTheBox 1s 1;
   animation: jackInTheBox 1s 1;
 
